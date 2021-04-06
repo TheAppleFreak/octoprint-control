@@ -1,0 +1,38 @@
+{
+    "Actions": [
+        {
+            "Icon": "cameraIcon", 
+            "Name": "View Webcam Stream", 
+            "States": [
+                {
+                    "Image": "cameraIcon",
+                    "TitleAlignment": "middle", 
+                    "FontSize": "16"
+                }
+            ], 
+            "SupportedInMultiActions": false,
+            "Tooltip": "View the OctoPrint webcam stream on the keys of the Stream Deck",
+            "UUID": "me.theapplefreak.octoprintcontrol"
+        }
+    ],
+    "SDKVersion": 2,
+    "Author": "TheAppleFreak",
+    "CodePath": "index.html",
+    "Description": "Does stuff with OctoPrint idk TODO: Change this text before publishing",
+    "Name": "OctoPrint Control",
+    "Icon": "pluginIcon",
+    "Version": "1.0.0",
+    "OS": [
+        {
+            "Platform": "mac",
+            "MinimumVersion": "10.11"
+        },
+        {
+            "Platform": "windows",
+            "MinimumVersion": "10"
+        }
+    ],
+    "Software": {
+        "MinimumVersion": "4.1"
+    }
+}
