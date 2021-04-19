@@ -1,13 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: "development",
+    devtool: false,
     entry: {
         main: path.join(__dirname, "src", "ts", "index.ts"),
-        pi: path.join(__dirname, "src", "ts", "pi.ts")
+        "property-inspector": path.join(__dirname, "src", "ts", "pi.ts")
     },
     output: {
         path: path.join(__dirname, "build"),
@@ -33,16 +33,22 @@ module.exports = {
         extensions: [".ts", ".js", ".json"]
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
                 { from: path.join(__dirname, "src", "static"), to: "." }
             ]
         }),
         new HtmlWebpackPlugin({
-            title: "me.theapplefreak.octoprintcontrol",
             template: path.resolve(__dirname, "./src/html/index.html"),
-            filename: "index.html"
+            filename: "index.html",
+            inject: "body",
+            chunks: ["main"]
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "./src/html/property-inspector.html"),
+            filename: "property-inspector.html",
+            inject: "body",
+            chunks: ["property-inspector"]
         })
     ]
 }

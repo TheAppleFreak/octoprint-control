@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es2016",
+        "target": "ES6",
         "allowJs": false,
         "declaration": false,
         "sourceMap": true,

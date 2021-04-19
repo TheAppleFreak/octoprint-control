@@ -12,15 +12,18 @@
             ], 
             "SupportedInMultiActions": false,
             "Tooltip": "View the OctoPrint webcam stream on the keys of the Stream Deck",
-            "UUID": "me.theapplefreak.octoprintcontrol"
+            "UUID": "me.theapplefreak.octoprintcontrol.webcamoverlay"
         }
     ],
     "SDKVersion": 2,
     "Author": "TheAppleFreak",
+    "Category": "OctoPrint Control",
+    "CategoryIcon": "pluginIcon",
     "CodePath": "index.html",
     "Description": "Does stuff with OctoPrint idk TODO: Change this text before publishing",
     "Name": "OctoPrint Control",
     "Icon": "pluginIcon",
+    "PropertyInspectorPath": "property-inspector.html",
     "Version": "1.0.0",
     "OS": [
         {

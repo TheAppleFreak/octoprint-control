@@ -4,13 +4,9 @@ import { WebcamOverlayAction } from "./webcamOverlay";
 export default class OctoPrintControl extends StreamDeckPluginHandler {
     constructor() {
         super();
-        new WebcamOverlayAction(this, this.actionName("webcamOverlay"));
-    }
-    
-    private actionName(name: string): string {
-        return `me.theapplefreak.octoprintcontrol.${name}`;
+        new WebcamOverlayAction(this, "me.theapplefreak.octoprintcontrol.webcamoverlay");
     }
 }
 
 
-new OctoPrintControl();
+const plugin = new OctoPrintControl();

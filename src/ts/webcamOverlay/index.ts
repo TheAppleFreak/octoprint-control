@@ -1,5 +1,7 @@
 import WebcamOverlayAction from "./action";
+import WebcamOverlaySettingsInterface from "./pi";
 
 export {
-    WebcamOverlayAction
+    WebcamOverlayAction,
+    WebcamOverlaySettingsInterface
 };
